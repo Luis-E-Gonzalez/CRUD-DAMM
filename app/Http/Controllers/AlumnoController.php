@@ -36,7 +36,9 @@ class AlumnoController extends Controller
         }else{
             if($request->id_grupo>'0'){
                 $alumnos=Alumno::Grupo($request)->orderBy('id_alumno')->paginate(15);
-            }else {$alumnos=Alumno::paginate(15);}
+            }else if($request->genero !=''){
+                $alumnos=Alumno::Genero($request)->orderBy('id_alumno')->paginate(15);
+            }else{$alumnos=Alumno::paginate(15);}
         }
         $grupos = Grupo::all();
         return view('lista')

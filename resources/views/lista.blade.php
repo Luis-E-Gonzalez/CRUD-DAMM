@@ -42,6 +42,17 @@
                     @endforeach
                 </select>
             </div>
+            <div class="mb-3">
+                <label class="form-label">Buscar por género:</label>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="genero" value="Masculino">
+                    <label class="form-cheked-label">Masculino</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="genero" value="Femenino">
+                    <label class="form-cheked-label">Femenino</label>
+                </div>
+            </div>
 
             <div class="d-grid-gap2">
                 <input type="submit" value="Buscar" class="btn btn-primary" />
